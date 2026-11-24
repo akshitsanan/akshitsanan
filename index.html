@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Akshit's portfolio in Finance, Equity Research and Business Analytics.">
+<title>Akshit | Finance & Analytics</title>
+
+<style>
+:root {
+  --navy: #101b30;
+  --navy2: #1b3151;
+  --gold: #d2ad70;
+  --bg: #f5f7fa;
+  --white: #ffffff;
+  --text: #28364b;
+  --muted: #718096;
+}
+* {margin:0;padding:0;box-sizing:border-box;}
+html {scroll-behavior:smooth;}
+body {
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
+a {text-decoration:none;}
+nav {
+  background:var(--navy);
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:15px;
+}
+.logo {
+  font-size:23px;
+  font-weight:bold;
+  color:white;
+  letter-spacing:2px;
+}
+.logo span {color:var(--gold);}
+.navlinks {
+  display:flex;
+  gap:22px;
+  flex-wrap:wrap;
+}
+.navlinks a {
+  color:#e5eaf1;
+  font-size:13px;
+}
+.navlinks a:hover {color:var(--gold);}
+.hero {
+  min-height:510px;
+  padding:100px 9%;
+  background:linear-gradient(120deg,#101b30,#29466b);
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.eyebrow {
+  color:var(--gold);
+  font-size:12px;
+  letter-spacing:4px;
+  font-weight:bold;
+}
+.hero h1 {
+  font-size:clamp(43px,7vw,72px);
+  line-height:1.15;
+  margin:20px 0;
+}
+.hero h1 span {color:var(--gold);}
+.hero p {
+  max-width:650px;
+  color:#d4deeb;
+  font-size:18px;
+}
+.buttons {
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:30px;
+}
+.btn {
+  display:inline-block;
+  padding:12px 24px;
+  border-radius:5px;
+  background:var(--gold);
+  color:var(--navy);
+  font-weight:bold;
+  font-size:14px;
+}
+.btn.secondary {
+  background:transparent;
+  color:white;
+  border:1px solid #bfcbd9;
+}
+.btn:hover {opacity:.85;}
+section {padding:75px 9%;}
+.section-head {margin-bottom:30px;}
+.section-head small {
+  color:#a27b3f;
+  letter-spacing:3px;
+  font-weight:bold;
+  font-size:12px;
+}
+.section-head h2 {
+  color:var(--navy);
+  font-size:34px;
+  margin-top:5px;
+}
+.about {background:white;}
+.about p {
+  max-width:850px;
+  color:var(--muted);
+  font-size:16px;
+}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
+}
+.card {
+  background:white;
+  padding:25px;
+  border:1px solid #e5eaf0;
+  border-radius:10px;
+  box-shadow:0 5px 20px rgba(16,27,48,.04);
+  transition:.25s;
+}
+.card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(16,27,48,.09);
+}
+.card .symbol {
+  font-size:27px;
+  margin-bottom:12px;
+}
+.card h3 {
+  color:var(--navy);
+  margin-bottom:9px;
+  font-size:19px;
+}
+.card p {
+  color:var(--muted);
+  font-size:14px;
+}
+.education {background:white;}
+.timeline {
+  border-left:3px solid var(--gold);
+  padding-left:25px;
+}
+.timeline-item {margin-bottom:30px;}
+.timeline-item h3 {color:var(--navy);}
+.timeline-item .date {
+  color:#a27b3f;
+  font-size:13px;
+  font-weight:bold;
+}
+.timeline-item p {
+  color:var(--muted);
+  font-size:14px;
+}
+.tag {
+  display:inline-block;
+  background:#edf1f6;
+  color:#29466b;
+  padding:5px 12px;
+  border-radius:30px;
+  margin:5px 4px 0 0;
+  font-size:12px;
+}
+.projects {background:#edf1f6;}
+.project-card {
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  border-top:3px solid var(--gold);
+}
+.project-card h3 {color:var(--navy);margin-bottom:10px;}
+.project-card p {color:var(--muted);font-size:14px;}
+.project-card small {
+  display:inline-block;
+  margin-top:15px;
+  color:#a27b3f;
+  font-weight:bold;
+}
+.cert-card {
+  background:white;
+  border-radius:9px;
+  padding:20px;
+  border:1px solid #e5eaf0;
+}
+.cert-card h3 {font-size:16px;color:var(--navy);}
+.cert-card p {font-size:13px;color:var(--muted);margin-top:5px;}
+.status {
+  display:inline-block;
+  margin-top:10px;
+  color:#8a692f;
+  background:#f8f1e4;
+  border-radius:20px;
+  padding:4px 10px;
+  font-size:11px;
+}
+.contact {
+  background:var(--navy);
+  color:white;
+}
+.contact .section-head h2 {color:white;}
+.contact p {color:#d1dbe8;margin-bottom:15px;}
+.contact a {color:var(--gold);}
+.contact-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:25px;
+  margin-top:25px;
+}
+footer {
+  text-align:center;
+  background:#0a1221;
+  color:#aeb9c9;
+  padding:22px;
+  font-size:13px;
+}
+@media(max-width:650px) {
+  nav {padding:18px 6%;}
+  .navlinks {gap:12px;}
+  .hero {padding:80px 7%;min-height:440px;}
+  section {padding:55px 7%;}
+  .section-head h2 {font-size:29px;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">AKSHIT<span>.</span></div>
+  <div class="navlinks">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">FINANCE • RESEARCH • ANALYTICS</div>
+  <h1>Hello, I'm<br><span>Akshit.</span></h1>
+  <p>
+    Commerce Graduate | MBA Business Analytics Student |
+    Aspiring Financial Analyst & Equity Research Professional
+  </p>
+  <div class="buttons">
+    <a class="btn" href="#projects">Explore My Work</a>
+    <a class="btn secondary" href="#contact">Contact Me</a>
+  </div>
+</header>
+
+<section class="about" id="about">
+  <div class="section-head">
+    <small>GET TO KNOW ME</small>
+    <h2>About Me</h2>
+  </div>
+  <p>
+    I am a Commerce graduate specializing in Accounting and Finance,
+    currently pursuing an MBA in Business Analytics.
+    <br><br>
+    I am interested in financial markets, company valuation,
+    equity research, financial modelling and data-driven
+    business decision-making.
+    <br><br>
+    I aim to combine financial knowledge with analytical
+    capabilities to understand businesses, evaluate investment
+    opportunities and generate meaningful insights.
+  </p>
+</section>
+
+<section class="education" id="education">
+  <div class="section-head">
+    <small>ACADEMIC BACKGROUND</small>
+    <h2>Education</h2>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="date">2026 – 2028</div>
+      <h3>MBA – Business Analytics</h3>
+      <p>Currently pursuing postgraduate education with an interest
+      in business intelligence, analytics and strategic decision-making.</p>
+    </div>
+    <div class="timeline-item">
+      <div class="date">2023 – 2026</div>
+      <h3>Bachelor of Commerce – Accounting & Finance</h3>
+      <p>Undergraduate education focused on accounting, finance
+      and business fundamentals.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-head">
+    <small>MY EXPERTISE</small>
+    <h2>Skills & Interests</h2>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="symbol">📊</div>
+      <h3>Financial Analysis</h3>
+      <p>Financial statements, ratio analysis, company performance
+      and financial interpretation.</p>
+    </div>
+    <div class="card">
+      <div class="symbol">📈</div>
+      <h3>Equity Research</h3>
+      <p>Business analysis, industry research, investment analysis
+      and company evaluation.</p>
+    </div>
+    <div class="card">
+      <div class="symbol">💹</div>
+      <h3>Financial Modelling</h3>
+      <p>Interest in valuation methodologies, financial projections
+      and company valuation.</p>
+    </div>
+    <div class="card">
+      <div class="symbol">📉</div>
+      <h3>Business Analytics</h3>
+      <p>Data interpretation, analytical problem-solving,
+      business insights and decision support.</p>
+    </div>
+  </div>
+  <div style="margin-top:25px">
+    <h3 style="color:#101b30;margin-bottom:10px">Areas of Interest</h3>
+    <span class="tag">Financial Markets</span>
+    <span class="tag">Equity Research</span>
+    <span class="tag">Company Valuation</span>
+    <span class="tag">Financial Modelling</span>
+    <span class="tag">Business Analytics</span>
+    <span class="tag">Investment Analysis</span>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="section-head">
+    <small>MY PRACTICAL WORK</small>
+    <h2>Projects & Case Studies</h2>
+  </div>
+  <div class="grid">
+    <div class="project-card">
+      <h3>Company Valuation</h3>
+      <p>Develop a company valuation study using financial
+      statements, assumptions and valuation methodologies.</p>
+      <small>PROJECT TO BE ADDED</small>
+    </div>
+    <div class="project-card">
+      <h3>Equity Research Report</h3>
+      <p>Analyse a listed company's business model, industry,
+      financial performance, risks and growth opportunities.</p>
+      <small>PROJECT TO BE ADDED</small>
+    </div>
+    <div class="project-card">
+      <h3>Financial Statement Analysis</h3>
+      <p>Study revenue, profitability, liquidity, leverage and
+      other financial indicators of a business.</p>
+      <small>PROJECT TO BE ADDED</small>
+    </div>
+    <div class="project-card">
+      <h3>Business Analytics Dashboard</h3>
+      <p>Use a dataset to identify trends, create visualisations
+      and communicate business insights.</p>
+      <small>PROJECT TO BE ADDED</small>
+    </div>
+  </div>
+  <p style="margin-top:20px;color:#718096;font-size:13px">
+    These are planned project areas, not completed projects.
+    Portfolio case studies will be added as you complete them.
+  </p>
+</section>
+
+<section id="certifications">
+  <div class="section-head">
+    <small>CONTINUOUS LEARNING</small>
+    <h2>Certifications & Learning</h2>
+  </div>
+  <div class="grid">
+    <div class="cert-card">
+      <h3>NISM Series XV – Research Analyst</h3>
+      <p>Equity research and securities market knowledge.</p>
+      <span class="status">Preparation</span>
+    </div>
+    <div class="cert-card">
+      <h3>NISM Mutual Fund Distributor</h3>
+      <p>Mutual funds and investment products.</p>
+      <span class="status">Planned</span>
+    </div>
+    <div class="cert-card">
+      <h3>Bloomberg Market Concepts</h3>
+      <p>Financial markets and market concepts.</p>
+      <span class="status">Planned</span>
+    </div>
+    <div class="cert-card">
+      <h3>Financial Modelling & Valuation – CFI</h3>
+      <p>Financial modelling and valuation training.</p>
+      <span class="status">Planned</span>
+    </div>
+    <div class="cert-card">
+      <h3>Microsoft Copilot – LinkedIn Learning</h3>
+      <p>AI productivity and workplace applications.</p>
+      <span class="status">Planned</span>
+    </div>
+  </div>
+  <p style="margin-top:18px;color:#718096;font-size:13px">
+    Certification statuses should be updated as you complete each course.
+  </p>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-head">
+    <small>LET'S CONNECT</small>
+    <h2>Contact Me</h2>
+  </div>
+  <p>
+    I am interested in connecting with professionals,
+    exploring opportunities and learning from the finance
+    and business analytics community.
+  </p>
+  <div class="contact-links">
+    <a href="https://www.linkedin.com/" target="_blank">LinkedIn ↗</a>
+    <a href="mailto:YOUR_EMAIL@example.com">Email Me ↗</a>
+    <a href="https://github.com/akshitsanan" target="_blank">GitHub ↗</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Akshit | Finance & Business Analytics Portfolio
+  <br>Built with GitHub Pages
+</footer>
+
+</body>
+</html>
